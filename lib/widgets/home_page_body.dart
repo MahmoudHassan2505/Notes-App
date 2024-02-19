@@ -8,8 +8,9 @@ class HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: ListView(
-        children: [Note()],
+      child: ListView.builder(
+        itemCount: 10,
+        itemBuilder: ((context, index) => Note()),
       ),
     );
   }

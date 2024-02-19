@@ -6,6 +6,7 @@ class Note extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 7, top: 8),
       padding: EdgeInsets.symmetric(vertical: 30),
       decoration: BoxDecoration(
         color: Colors.amber,
@@ -54,3 +55,4 @@ class Note extends StatelessWidget {
 
 //محطش ارتفاع للكونتينر علشان لو الويدجيت الي جوه كبرت الشكل هيضرب
 //علشان كده استخدم باددنج 
+//ُExpanded widget: بخلي الويدجيت تاخد المساحه المتاحه ليها
