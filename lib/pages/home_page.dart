@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/add_note.dart';
 import 'package:notes_app/widgets/home_page_body.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,7 +10,13 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         shape: CircleBorder(),
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return AddNote();
+              });
+        },
         child: Icon(Icons.add),
       ),
       appBar: AppBar(
