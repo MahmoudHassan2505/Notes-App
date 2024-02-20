@@ -56,3 +56,6 @@ class Note extends StatelessWidget {
 //محطش ارتفاع للكونتينر علشان لو الويدجيت الي جوه كبرت الشكل هيضرب
 //علشان كده استخدم باددنج 
 //ُExpanded widget: بخلي الويدجيت تاخد المساحه المتاحه ليها
+//
+//statless widget must make the constructor cons 
+//if we can't do that we convert it to statfulwidget

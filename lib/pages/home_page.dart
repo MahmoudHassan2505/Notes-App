@@ -7,6 +7,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        shape: CircleBorder(),
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
       appBar: AppBar(
         elevation: 0,
         title: const Text(
