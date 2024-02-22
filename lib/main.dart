@@ -5,10 +5,12 @@ import 'package:notes_app/constants.dart';
 import 'package:notes_app/cubits/add_notes_cubit/add_note_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/pages/home_page.dart';
+import 'package:notes_app/simple_bloc_observer.dart';
 
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(NoteBox);
+  Bloc.observer = SimpleBlocObserver();
   Hive.registerAdapter(NoteModelAdapter()); // this line to register my objects
 
   runApp(const MyApp());
@@ -37,3 +39,5 @@ class MyApp extends StatelessWidget {
 
 //علي الاغلب لكل اسكرين هيبقي ليها كيوبيت
 
+
+//Bloc observer: this to track the states of the application
