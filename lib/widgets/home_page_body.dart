@@ -18,7 +18,9 @@ class HomePageBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: ListView.builder(
             itemCount: notes.length,
-            itemBuilder: ((context, index) => Note()),
+            itemBuilder: ((context, index) => Note(
+                  noteModel: notes[index],
+                )),
           ),
         );
       },
