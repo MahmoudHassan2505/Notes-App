@@ -12,7 +12,7 @@ void main() async {
   Hive.registerAdapter(
       NoteModelAdapter()); // this line to register my objects must be before openBox
 
-  await Hive.openBox<NoteModel>(NoteBox);
+  await Hive.openBox<NoteModel>(KNoteBox);
   Bloc.observer = SimpleBlocObserver();
 
   runApp(const MyApp());
