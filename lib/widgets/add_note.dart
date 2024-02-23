@@ -23,8 +23,11 @@ class AddNote extends StatelessWidget {
             }
           },
           builder: (context, state) {
-            return const SingleChildScrollView(
-              child: AddNoteForm(),
+            return AbsorbPointer(
+              absorbing: state is AddNoteLoading ? true : false,
+              child: const SingleChildScrollView(
+                child: AddNoteForm(),
+              ),
             );
           },
         ),
@@ -34,4 +37,6 @@ class AddNote extends StatelessWidget {
 }
 
 
-//BlocConsumer ans BlocBuilder used when we want to rebuild ui like hide or change in the ui
+//BlocBuilder used when we want to rebuild ui like hide or change in the ui
+//BlocConsumer used also to rebuild ui but also do some code depend on state
+//BlocListener used to do some code depend on the state
