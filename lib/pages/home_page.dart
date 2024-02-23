@@ -9,15 +9,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        shape: CircleBorder(),
+        shape: const CircleBorder(),
         onPressed: () {
           showModalBottomSheet(
+              isScrollControlled: true,
               context: context,
               builder: (context) {
-                return AddNote();
+                return const AddNote();
               });
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       appBar: AppBar(
         elevation: 0,
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
               ))
         ],
       ),
-      body: HomePageBody(),
+      body: const HomePageBody(),
     );
   }
 }
