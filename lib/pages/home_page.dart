@@ -14,7 +14,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     BlocProvider.of<FetchNoteCubit>(context).fetchAll();
   }
@@ -40,14 +39,6 @@ class _HomePageState extends State<HomePage> {
           "Notes",
           style: TextStyle(fontSize: 30),
         ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.search,
-                size: 30,
-              ))
-        ],
       ),
       body: const HomePageBody(),
     );
