@@ -43,7 +43,9 @@ class Note extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  noteModel.delete();
+                },
                 icon: const Icon(
                   Icons.delete,
                   size: 25,
