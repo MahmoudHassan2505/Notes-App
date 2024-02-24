@@ -5,7 +5,6 @@ import 'package:notes_app/widgets/edit_note_page_body.dart';
 class EditNotePage extends StatelessWidget {
   final NoteModel noteModel;
   const EditNotePage({super.key, required this.noteModel});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
