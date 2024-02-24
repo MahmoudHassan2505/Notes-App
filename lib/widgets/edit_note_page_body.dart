@@ -4,6 +4,7 @@ import 'package:notes_app/cubits/fetch_note_cubit/fetch_note_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/widgets/custom_button.dart';
 import 'package:notes_app/widgets/custom_textfield.dart';
+import 'package:notes_app/widgets/edit_note_color_list.dart';
 
 class EditNotePageBody extends StatefulWidget {
   final NoteModel noteModel;
@@ -19,7 +20,7 @@ class _EditNotePageBodyState extends State<EditNotePageBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: SingleChildScrollView(
         child: Form(
           key: formKey,
@@ -47,6 +48,12 @@ class _EditNotePageBodyState extends State<EditNotePageBody> {
                 onSaved: (value) {
                   widget.noteModel.subTitle = value!;
                 },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              EditNoteColorList(
+                noteModel: widget.noteModel,
               ),
               const SizedBox(
                 height: 20,
