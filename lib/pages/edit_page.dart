@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/widgets/edit_note_page_body.dart';
 
 class EditNotePage extends StatelessWidget {
-  const EditNotePage({super.key});
+  final NoteModel noteModel;
+  const EditNotePage({super.key, required this.noteModel});
 
   @override
   Widget build(BuildContext context) {
@@ -13,16 +15,10 @@ class EditNotePage extends StatelessWidget {
           "Edit Notes",
           style: TextStyle(fontSize: 30),
         ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.done,
-                size: 30,
-              ))
-        ],
       ),
-      body: EditNotePageBody(),
+      body: EditNotePageBody(
+        noteModel: noteModel,
+      ),
     );
   }
 }
